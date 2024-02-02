@@ -1,24 +1,24 @@
 // import { Carousel } from 'bootstrap';
 import './App.css';
-import Navbar from './Pages/Homepage/Navbar';
-import Slider from './Pages/Homepage/Slider';
-import Cards from './Pages/Homepage/Cards';
 import Discount from './Pages/Homepage/Discount';
-import NewArrivals from './Pages/Homepage/NewArrivals';
-import BestSales from './Pages/Homepage/BestSales';
-import Footer from './Pages/Homepage/Footer';
-
+import Navbar from './Pages/Homepage/Navbar';
+import Cards from './Pages/Homepage/Cards'
+import NewArrivals from './Pages/Homepage/NewArrivals'
+import BestSales from './Pages/Homepage/BestSales'
+import Footer from './Pages/Homepage/Footer'
+import Slider from './Pages/Homepage/Slider'
+import RoutingAll from './Pages/Routing/RoutingAll';
 function App() {
   return (
     <div className="App">
-       <Navbar/>
-       <Slider/>
-       {/* <Carousel/> */}
-       <Cards/>
-       <Discount/>
-       <NewArrivals/>
-       <BestSales/>
-       <Footer/>
+      <Navbar/>
+      {/* <Slider/>
+      <Cards/> */}
+      {/* <Discount/> */}
+        <RoutingAll/> 
+      {/* <NewArrivals/>
+      <BestSales/>  */}
+      <Footer/>
     </div>
   );
 }

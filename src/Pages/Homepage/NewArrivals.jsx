@@ -17,8 +17,8 @@ export default function NewArrivals() {
         <div style={{display:'flex',flexDirection:"column",gap:60}}>
              <h3 style={{textAlign:'center'}}>New Arrival Data</h3>
             <div style={{ display: 'grid', gridTemplateColumns: 'auto auto auto', justifyContent: 'center', gap: 30 ,}}>
-                {items.map((values, index) => (
-                    <Space direction="vertical" size={16} key={index}>
+                {items.map((values) => (
+                    <Space direction="vertical" size={16} key={values.id}>
                         <Card
                             style={{
                                 width: 320,
@@ -28,7 +28,7 @@ export default function NewArrivals() {
                             <div><img src={values.imgUrl} alt="" style={{ width: 250, height: 250 }} /></div>
                             <div><b>{values.productName}</b></div>
                             <div>{Array.from({ length: values.reviews[0].rating }, (_, i) => (
-                                <span className='text-warning'>&#9733;</span>
+                                <span key = {i}className='text-warning'>&#9733;</span>
                             ))}</div>
                             <h6><b>${values.price}</b></h6>
                         </Card>
