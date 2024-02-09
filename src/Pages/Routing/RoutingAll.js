@@ -5,6 +5,7 @@ import Cards from '../Homepage/Cards'
 import Slider from '../Homepage/Slider'
 import NewArrivals from '../Homepage/NewArrivals'
 import BestSales from '../Homepage/BestSales'
+import Background from '../Shoppage/Background'
 export default function RoutingAll() {
   return (
     
@@ -18,6 +19,12 @@ export default function RoutingAll() {
                             <Discount/>
                             <NewArrivals/>
                             <BestSales/>
+                </>
+              }/>
+              <Route path='/shop'
+              element ={
+                <>
+                     <Background/>
                 </>
               }/>
               </Routes>
