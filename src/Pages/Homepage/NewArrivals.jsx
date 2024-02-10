@@ -14,8 +14,8 @@ export default function NewArrivals() {
         getData();
     },[])
     return (
-        <div style={{display:'flex',flexDirection:"column",gap:60}}>
-             <h3 style={{textAlign:'center'}}>New Arrival Data</h3>
+        <div >
+             <h3 style={{textAlign:'center',lineHeight:5}}>New Arrival Data</h3>
             <div style={{ display: 'grid', gridTemplateColumns: 'auto auto auto', justifyContent: 'center', gap: 30 ,}}>
                 {items.map((values) => (
                     <Space direction="vertical" size={16} key={values.id}>
@@ -30,7 +30,11 @@ export default function NewArrivals() {
                             <div>{Array.from({ length: values.reviews[0].rating }, (_, i) => (
                                 <span key = {i}className='text-warning'>&#9733;</span>
                             ))}</div>
-                            <h6><b>${values.price}</b></h6>
+                            <div style={{display:'flex',justifyContent:"space-between"}}>
+                                <h6><b>${values.price}</b></h6> 
+                             <a href="cart" style={{textDecoration:'none',color:'inherit'}}><span style={{fontSize:26}}>+</span>
+                             </a>
+                            </div>
                         </Card>
                     </Space>
                 ))}

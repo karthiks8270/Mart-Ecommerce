@@ -27,7 +27,11 @@ export default function BestSales() {
                     <div>{Array.from({ length: values.reviews[0].rating }, (_, i) => (
                                 <span key={i}className='text-warning'>&#9733;</span>
                             ))}</div>
-                    <div><b>${values.price}</b></div>
+                   <div style={{display:'flex',justifyContent:"space-between"}}>
+                                <h6><b>${values.price}</b></h6> 
+                             <a href="cart" style={{textDecoration:'none',color:'inherit'}}><span style={{fontSize:26}}>+</span>
+                             </a>
+                            </div>
                     </Card>
                     </Space>
                ))}

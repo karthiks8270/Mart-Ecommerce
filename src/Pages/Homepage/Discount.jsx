@@ -3,8 +3,8 @@ import { discoutProducts } from '../Assets/Products'
 export default function Discount() {
 
     return (
-        <div style={{ backgroundColor: '#e2e8f0', height: 900 }}>
-            <h3 style={{ textAlign: 'center' }}>Big Discount</h3>
+        <div style={{ backgroundColor: '#e2e8f0', height: 1000 }}>
+            <h3 style={{ textAlign: 'center',lineHeight:5 }}>Big Discount</h3>
             <div style={{ display: 'grid', gridTemplateColumns: "auto auto auto", justifyContent: "center", gap: 30,lineHeight:20 }}>
                 {discoutProducts.map((items) => (
                     <Space direction="horizontal" size={16} key={items.id}>
