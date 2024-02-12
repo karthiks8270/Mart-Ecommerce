@@ -4,6 +4,7 @@ import { Dropdown, Input, Space } from 'antd';
 import { DownOutlined } from '@ant-design/icons'
 import Card from 'antd/es/card/Card';
 import { products } from '../Assets/Products';
+import { Link } from 'react-router-dom';
 const tableImg = require('../Assets/Images/table.jpg');
 
 export default function Background() {
@@ -87,7 +88,8 @@ export default function Background() {
       <div style={{ display: "grid", gridTemplateColumns: 'auto auto auto', justifyContent: 'center', alignItems: 'center', gap: 35 }}>
         {selectedSection.map((product) => (
 
-          <Space direction="vertical" size={16} key={product.id} >
+          <Link to={`/product/${product.id}`} key={product.id}>
+                     <Space direction="vertical" size={16} key={product.id} >
             <Card
               style={{
                 width: "100%",
@@ -101,11 +103,13 @@ export default function Background() {
               ))}</div>
               <div style={{ display: 'flex', justifyContent: "space-between" }}>
                 <h6><b>${product.price}</b></h6>
-                <a href="cart" style={{ textDecoration: 'none', color: 'inherit' }}><span style={{ fontSize: 26 }}>+</span>
-                </a>
+                {/* <a href="cart" style={{ textDecoration: 'none', color: 'inherit' }}><span style={{ fontSize: 26 }}>+</span>
+                </a> */}
+                <Link to='/' style={{ textDecoration: 'none', color: 'inherit' }}><span style={{ fontSize: 26 }}>+</span></Link>
               </div>
             </Card>
           </Space>
+          </Link>
         )
         )}
       </div>

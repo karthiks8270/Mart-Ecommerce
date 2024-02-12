@@ -6,6 +6,7 @@ import Slider from '../Homepage/Slider'
 import NewArrivals from '../Homepage/NewArrivals'
 import BestSales from '../Homepage/BestSales'
 import Background from '../Shoppage/Background'
+import ProductDetail from '../Productpage/ProductDetail'
 export default function RoutingAll() {
   return (
     
@@ -27,6 +28,9 @@ export default function RoutingAll() {
                      <Background/>
                 </>
               }/>
+              <Route path="/product/:id" element ={ <>
+                      <ProductDetail/>
+              </>}/>
               </Routes>
           </BrowserRouter>
   )

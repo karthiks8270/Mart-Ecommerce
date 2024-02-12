@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { products } from '../Assets/Products'
 import { Card, Space } from 'antd';
+import { Link } from 'react-router-dom';
 export default function BestSales() {
   const[items,setItems]=useState(products);
   const getData =() => {
@@ -16,7 +17,8 @@ export default function BestSales() {
         <h3 style={{textAlign:'center',lineHeight:5}}>Best Sales</h3>
         <div style={{display:'grid',gridTemplateColumns:'auto auto auto',justifyContent:'center',gap:30}}>
                {items.map((values)=>(
-                   <Space direction="vertical" size={16} key={values.id}>
+                 <Link to={`/product/${values.id}`}>
+                      <Space direction="vertical" size={16} key={values.id}>
                    <Card
                        style={{
                            width: 320,
@@ -34,6 +36,7 @@ export default function BestSales() {
                             </div>
                     </Card>
                     </Space>
+                 </Link>
                ))}
         </div>
     </div>
