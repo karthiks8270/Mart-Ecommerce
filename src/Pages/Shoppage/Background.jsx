@@ -9,7 +9,7 @@ const tableImg = require('../Assets/Images/table.jpg');
 
 export default function Background() {
   const [selectedSection, setSelectedSection] = useState(products.filter(value => value.category === 'sofa'));
-
+  
 
   const handleSectionClick = (section) => {
     const FilterData = products.filter(item => item.category === section)
@@ -20,6 +20,15 @@ export default function Background() {
     const FilterData = products.filter(items => items.category.toLowerCase().includes(value.toLowerCase()) ||
       items.productName.toLowerCase().includes(value.toLowerCase()))
     setSelectedSection(FilterData);
+  }
+  const setLocalStorage = (value) =>{
+      const existingData = JSON.parse(localStorage.getItem('k') || [])
+      const storeData = products.filter(items => items.id === value);
+      console.log({storeData})
+      const updatedData = [...existingData,...storeData];
+      localStorage.setItem('k',JSON.stringify(updatedData));
+    
+   
   }
   const items = [
     {
@@ -105,7 +114,7 @@ export default function Background() {
                 <h6><b>${product.price}</b></h6>
                 {/* <a href="cart" style={{ textDecoration: 'none', color: 'inherit' }}><span style={{ fontSize: 26 }}>+</span>
                 </a> */}
-                <Link to='/' style={{ textDecoration: 'none', color: 'inherit' }}><span style={{ fontSize: 26 }}>+</span></Link>
+                <button style={{border:'none',backgroundColor:'transparent'}} onClick={(e) => setLocalStorage(product.id)}><span style={{ fontSize: 26 }}>+</span></button>
               </div>
             </Card>
           </Space>

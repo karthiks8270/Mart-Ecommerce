@@ -13,9 +13,9 @@ export default function Navbar() {
                     <div className="navbar-nav features">
                         <a className="nav-link active" href="/"><b>Home</b></a>
                         <a className="nav-link active" href='/shop'><b>Shop</b></a>
-                        <a className="nav-link active" href="j"><b>Cart</b></a>
+                        <a className="nav-link active" href="/cart"><b>Cart</b></a>
                         <a className="nav-link active" href="j"><b><FontAwesomeIcon icon={faUser} /></b></a>
-                        <a className="nav-link active" href="j"><b><FontAwesomeIcon icon={faShoppingCart} /></b></a>
+                        <a className="nav-link active" href="/cart"><b><FontAwesomeIcon icon={faShoppingCart} /></b></a>
                     </div>
                 </div>
             </nav>

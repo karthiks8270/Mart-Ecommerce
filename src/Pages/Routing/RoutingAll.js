@@ -7,6 +7,7 @@ import NewArrivals from '../Homepage/NewArrivals'
 import BestSales from '../Homepage/BestSales'
 import Background from '../Shoppage/Background'
 import ProductDetail from '../Productpage/ProductDetail'
+import Cart from '../Cartpage/Cart'
 export default function RoutingAll() {
   return (
     
@@ -31,6 +32,12 @@ export default function RoutingAll() {
               <Route path="/product/:id" element ={ <>
                       <ProductDetail/>
               </>}/>
+              <Route path='/cart'
+              element ={
+                <>
+                      <Cart/>
+                </>
+              }/>
               </Routes>
           </BrowserRouter>
   )
